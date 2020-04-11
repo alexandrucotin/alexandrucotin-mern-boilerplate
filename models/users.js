@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
     name:{
-        type:vString,
+        type: String,
         maxlength: 50
     },
     lastname:{
@@ -12,8 +12,7 @@ const userSchema = mongoose.Schema({
     },
     email:{
         type: String,
-        trim: true,
-        unique: 1
+        trim: true
     },
     password:{
         type: String,
