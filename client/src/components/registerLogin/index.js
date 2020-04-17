@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 
 class RegisterLogin extends Component {
+  state = {
+    email: "",
+    password: "",
+    errors: [],
+  };
+
+  handleChange = event => {
+      this.setState({
+          [event.target.name]: event.target.value
+      })
+  }
   render() {
     return (
       <div className="container">
@@ -44,6 +55,18 @@ class RegisterLogin extends Component {
                   data-error="Wrong password"
                   data-success="ok!"
                 />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col s12">
+                <button
+                  className="btn waves-effect red lighten-2"
+                  type="submit"
+                  name="action"
+                  onClick={this.submitForm}
+                >
+                  Login!
+                </button>
               </div>
             </div>
           </form>
